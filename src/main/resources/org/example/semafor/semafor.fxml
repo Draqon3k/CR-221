@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
 
-<Scene xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1">
-    <AnchorPane prefHeight="662.0" prefWidth="747.0" style="-fx-background-color: #736161;">
-        <children>
+<AnchorPane prefHeight="672.0" prefWidth="747.0" style="-fx-background-color: #736161;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.semafor.TrafficController">
+
+<children>
+            <!-- Aceste Rectangluri reprezinta zebra -->
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="113.0" layoutY="149.0" stroke="BLACK" strokeType="INSIDE" width="41.0" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="174.0" layoutY="149.0" stroke="BLACK" strokeType="INSIDE" width="41.0" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="234.0" layoutY="149.0" stroke="BLACK" strokeType="INSIDE" width="41.0" />
@@ -16,15 +16,17 @@
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="358.0" layoutY="149.0" stroke="BLACK" strokeType="INSIDE" width="41.0" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="418.0" layoutY="149.0" stroke="BLACK" strokeType="INSIDE" width="41.0" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="475.0" layoutY="149.0" stroke="BLACK" strokeType="INSIDE" width="41.0" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="535.0" layoutY="149.0" stroke="BLACK" strokeType="INSIDE" width="41.0" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="592.0" layoutY="149.0" stroke="BLACK" strokeType="INSIDE" width="41.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="534.0" layoutY="149.0" stroke="BLACK" strokeType="INSIDE" width="41.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="593.0" layoutY="149.0" stroke="BLACK" strokeType="INSIDE" width="41.0" />
+            <!-- Aceste Lini reprezinta marcajele pentru traseu -->
             <Line endX="-328.0" endY="-158.50003051757812" layoutX="403.0" layoutY="220.0" startX="267.0" startY="-158.50003051757812" stroke="WHITE" strokeWidth="3.0" />
             <Line endX="-12.79998779296875" layoutX="368.0" layoutY="1.0" startX="-12.79998779296875" startY="59.5" stroke="WHITE" strokeWidth="3.0" />
             <Line endX="-12.79998779296875" layoutX="384.0" layoutY="1.0" startX="-12.79998779296875" startY="59.5" stroke="WHITE" strokeWidth="3.0" />
-            <Line endX="-12.79998779296875" endY="-158.5" layoutX="374.0" layoutY="602.0" startX="-12.79998779296875" startY="59.5" stroke="WHITE" strokeWidth="3.0" />
-            <Line endX="-12.79998779296875" endY="-158.5" layoutX="392.0" layoutY="602.0" startX="-12.79998779296875" startY="59.5" stroke="WHITE" strokeWidth="3.0" />
+            <Line endX="-12.79998779296875" endY="-158.5" layoutX="374.0" layoutY="602.0" startX="-12.79998779296875" startY="80.4000244140625" stroke="WHITE" strokeWidth="3.0" />
+            <Line endX="-12.79998779296875" endY="-158.5" layoutX="392.0" layoutY="602.0" startX="-12.800018310546875" startY="79.4000244140625" stroke="WHITE" strokeWidth="3.0" />
             <Line endX="-328.0" endY="-158.50003051757812" layoutX="403.0" layoutY="600.0" startX="267.0" startY="-158.00003051757812" stroke="WHITE" strokeWidth="3.0" />
-            <GridPane layoutX="133.0" layoutY="449.0" prefHeight="207.0" prefWidth="163.0">
+            <!-- Aici sunt reprezentate transporturile -->
+            <GridPane fx:id="vehicle1" layoutX="133.0" layoutY="449.0" prefHeight="207.0" prefWidth="163.0">
                 <columnConstraints>
                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -87,7 +89,8 @@
                     </Rectangle>
                 </children>
             </GridPane>
-            <GridPane layoutX="445.0" layoutY="27.0" prefHeight="207.0" prefWidth="163.0" rotate="180.0">
+
+            <GridPane fx:id="vehicle2" layoutX="435.0" layoutY="-154.0" prefHeight="207.0" prefWidth="163.0" rotate="180.0">
                 <columnConstraints>
                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -150,8 +153,10 @@
                     </Rectangle>
                 </children>
             </GridPane>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#404951" height="663.0" layoutX="-22.0" layoutY="-6.0" stroke="BLACK" strokeType="INSIDE" width="77.0" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#404951" height="664.0" layoutX="669.0" stroke="#1e1e1e" strokeType="INSIDE" width="77.0" />
+            <!-- Aceste Rectangluri reprezinta acostamnet -->
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#404951" height="688.0" layoutX="-22.0" layoutY="-6.0" stroke="BLACK" strokeType="INSIDE" width="94.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#404951" height="682.0" layoutX="669.0" stroke="#1e1e1e" strokeType="INSIDE" width="77.0" />
+            <!-- Aici sunt reprezentate doua semafoare amplasate pe acostament pentru pietoni-->
             <Line endX="-12.79998779296875" layoutX="47.0" layoutY="77.0" startX="-12.799999237060547" startY="68.69999694824219" strokeWidth="3.0" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#091520" height="55.0" layoutX="21.0" layoutY="26.0" stroke="BLACK" strokeType="INSIDE" width="27.0" />
             <Circle fill="#842c2c" layoutX="34.0" layoutY="42.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
@@ -160,8 +165,9 @@
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#091520" height="55.0" layoutX="694.0" layoutY="270.0" stroke="BLACK" strokeType="INSIDE" width="27.0" />
             <Circle fill="#842c2c" layoutX="707.0" layoutY="286.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
             <Circle fill="#347620" layoutX="707.0" layoutY="309.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
-           
-            <GridPane alignment="BOTTOM_LEFT" layoutX="-43.0" layoutY="80.0" prefHeight="251.0" prefWidth="175.0" scaleX="0.5" scaleY="0.5">
+
+            <!-- Aici este reprezentat doi omuleti -->
+            <GridPane alignment="BOTTOM_LEFT" layoutX="-53.0" layoutY="86.0" prefHeight="251.0" prefWidth="175.0" scaleX="0.5" scaleY="0.5">
                 <columnConstraints>
                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -213,16 +219,16 @@
                     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="84.0" stroke="BLACK" strokeType="INSIDE" width="19.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP" />
                 </children>
             </GridPane>
+            <!-- Aici este reprezentat Semaforul pentru soferi -->
             <Line endX="-12.79998779296875" layoutX="613.0" startX="-12.79998779296875" startY="26.899993896484375" strokeWidth="3.0" />
             <Line endX="-12.79998779296875" layoutX="566.0" layoutY="-3.0" startX="-12.79998779296875" startY="26.899993896484375" strokeWidth="3.0" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#091520" height="33.0" layoutX="526.0" layoutY="15.0" stroke="BLACK" strokeType="INSIDE" width="101.0" />
-            <Circle fill="#347620" layoutX="602.0" layoutY="32.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="#842c2c" layoutX="552.0" layoutY="32.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="#6f731f" layoutX="577.0" layoutY="32.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="greenLight" fill="#347620" layoutX="602.0" layoutY="32.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="redLight" fill="#842c2c" layoutX="552.0" layoutY="32.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="yellowLight" fill="#6f731f" layoutX="577.0" layoutY="32.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" height="10.0" layoutX="20.0" layoutY="143.0" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-            <Rectangle arcHeight="5.0" arcWidth="5.0" height="10.0" layoutX="692.0" layoutY="387.0" stroke="BLACK" strokeType="INSIDE" width="30.0" />
-            <Group layoutX="174.0" layoutY="497.0" />
-         <Button layoutX="699.0" layoutY="342.0" mnemonicParsing="false" />
-         <Button layoutX="26.0" layoutY="98.0" mnemonicParsing="false" />
-        </children></AnchorPane>
-</Scene>
+    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="113.0" layoutY="149.0" stroke="BLACK" strokeType="INSIDE" width="41.0" />
+    <Button layoutX="699.0" layoutY="342.0" mnemonicParsing="false" />
+    <Button layoutX="26.0" layoutY="98.0" mnemonicParsing="false" />
+        </children>
+    </AnchorPane>
