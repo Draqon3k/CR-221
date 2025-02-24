@@ -159,12 +159,19 @@
             <!-- Aici sunt reprezentate doua semafoare amplasate pe acostament pentru pietoni-->
             <Line endX="-12.79998779296875" layoutX="47.0" layoutY="77.0" startX="-12.799999237060547" startY="68.69999694824219" strokeWidth="3.0" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#091520" height="55.0" layoutX="21.0" layoutY="26.0" stroke="BLACK" strokeType="INSIDE" width="27.0" />
-            <Circle fill="#842c2c" layoutX="34.0" layoutY="42.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="#347620" layoutX="34.0" layoutY="65.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+
+
+            <!-- Aici sunt semafoarele pentru care trebuie sa faceti timere in urmatorul fel cand semaforul pentru soferi
+            este la culoare verde si galben atunci semaforul la pietoni va fi rosu iar cand va fi rosu se aprinde verde pana la galben pentru soferi.
+            Deci staruitava. +Lucrati inntrun fisier local si imi ziceti cand gatiti cu semaforul pentru pietoni. -->
+
+
+            <Circle fx:id="red1" fill="#842c2c" layoutX="34.0" layoutY="42.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="green1" fill="#347620" layoutX="34.0" layoutY="65.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
             <Line endX="-12.79998779296875" layoutX="720.0" layoutY="321.0" startX="-12.799999237060547" startY="68.69999694824219" strokeWidth="3.0" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#091520" height="55.0" layoutX="694.0" layoutY="270.0" stroke="BLACK" strokeType="INSIDE" width="27.0" />
-            <Circle fill="#842c2c" layoutX="707.0" layoutY="286.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fill="#347620" layoutX="707.0" layoutY="309.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="red1" fill="#842c2c" layoutX="707.0" layoutY="286.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="green1" fill="#347620" layoutX="707.0" layoutY="309.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
 
             <!-- Aici este reprezentat doi omuleti -->
             <GridPane alignment="BOTTOM_LEFT" layoutX="-53.0" layoutY="86.0" prefHeight="251.0" prefWidth="175.0" scaleX="0.5" scaleY="0.5">
