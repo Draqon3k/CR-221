@@ -174,7 +174,7 @@
             <Circle fx:id="green2" fill="#347620" layoutX="707.0" layoutY="309.0" radius="11.0" stroke="BLACK" strokeType="INSIDE" />
 
             <!-- Aici este reprezentat doi omuleti -->
-            <GridPane alignment="BOTTOM_LEFT" layoutX="-53.0" layoutY="86.0" prefHeight="251.0" prefWidth="175.0" scaleX="0.5" scaleY="0.5">
+            <GridPane fx:id="om1" alignment="BOTTOM_LEFT" layoutX="-53.0" layoutY="86.0" prefHeight="251.0" prefWidth="175.0" scaleX="0.5" scaleY="0.5">
                 <columnConstraints>
                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -200,7 +200,7 @@
                     <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="84.0" stroke="BLACK" strokeType="INSIDE" width="19.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP" />
                 </children>
             </GridPane>
-            <GridPane alignment="BOTTOM_LEFT" layoutX="-68.0" layoutY="130.0" prefHeight="251.0" prefWidth="175.0" scaleX="0.5" scaleY="0.5">
+            <GridPane fx:id="om2" alignment="BOTTOM_LEFT" layoutX="-68.0" layoutY="130.0" prefHeight="251.0" prefWidth="175.0" scaleX="0.5" scaleY="0.5">
                 <columnConstraints>
                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
