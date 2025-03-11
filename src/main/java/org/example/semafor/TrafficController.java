@@ -50,7 +50,7 @@ public class TrafficController {
                     if ("GREEN".equals(currentLight)) {
                         // Vehiculele se mișcă normal
                         vehicle1.setLayoutY(vehicle1.getLayoutY() - 6);
-                        if (vehicle1.getLayoutY() < -199) {
+                        if (vehicle1.getLayoutY() < -200) {
                             vehicle1.setLayoutY(600); // Resetare pentru vehiculul 1
                         }
 
